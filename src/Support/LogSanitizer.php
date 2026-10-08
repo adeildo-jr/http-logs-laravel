@@ -104,7 +104,7 @@ class LogSanitizer
     }
 
     /**
-     * @param  array<string, true>  $keys
+     * @param  array<string, bool>  $keys
      * @return array<string, mixed>|string
      */
     private function sanitizePart(mixed $part, array $keys): array|string
@@ -139,7 +139,7 @@ class LogSanitizer
 
     /**
      * @param  array<array-key, mixed>  $payload
-     * @param  array<string, true>  $keys
+     * @param  array<string, bool>  $keys
      * @return array<array-key, mixed>
      */
     private function boundedPayload(array $payload, array $keys): array
@@ -163,7 +163,7 @@ class LogSanitizer
 
     /**
      * @param  array<array-key, mixed>  $data
-     * @param  array<string, true>  $keys
+     * @param  array<string, bool>  $keys
      * @return array<array-key, mixed>
      */
     private function sanitizeArray(array $data, array $keys, int $depth, int $maxDepth, int &$remaining): array
@@ -205,7 +205,7 @@ class LogSanitizer
     }
 
     /**
-     * @param  array<string, true>  $keys
+     * @param  array<string, bool>  $keys
      */
     private function query(string $query, array $keys): ?string
     {
@@ -239,7 +239,7 @@ class LogSanitizer
     }
 
     /**
-     * @return array<string, true>
+     * @return array<string, bool>
      */
     private function redactedKeys(string $option): array
     {
@@ -261,7 +261,7 @@ class LogSanitizer
     }
 
     /**
-     * @param  array<string, true>  $keys
+     * @param  array<string, bool>  $keys
      */
     private function sensitiveFieldName(string $name, array $keys): bool
     {
