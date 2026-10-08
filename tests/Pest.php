@@ -1,0 +1,5 @@
+<?php
+
+use AdeildoJr\HttpLogs\Tests\TestCase;
+
+uses(TestCase::class)->in(__DIR__);
